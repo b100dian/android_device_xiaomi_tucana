@@ -117,11 +117,13 @@ BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := vendor/tucana_user_defconfig
   TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/tools-lineage/$(HOST_OS)-x86/dtc/dtc
-  TARGET_KERNEL_CLANG_COMPILE := true
+#  TARGET_KERNEL_ADDITIONAL_FLAGS := DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
+#   TARGET_KERNEL_CLANG_COMPILE := true
+#   TARGET_KERNEL_CLANG_PATH := kernel/xiaomi/tucana/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/bin
   TARGET_KERNEL_SOURCE := kernel/xiaomi/tucana
-#   TARGET_USE_SDCLANG := true
-#   SDCLANG := true
-#   SDCLANG_PATH := kernel/xiaomi/tucana/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/bin
+  TARGET_USE_SDCLANG := true
+  SDCLANG := true
+  SDCLANG_PATH := kernel/xiaomi/tucana/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/bin
 endif
 
 # Platform
