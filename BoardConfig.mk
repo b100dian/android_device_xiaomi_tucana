@@ -123,7 +123,7 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/tucana
   TARGET_USE_SDCLANG := true
   SDCLANG := true
-  SDCLANG_PATH := kernel/xiaomi/tucana/toolchains/llvm-Snapdragon_LLVM_for_Android_8.0/prebuilt/linux-x86_64/bin
+  SDCLANG_PATH := $(shell pwd)/prebuilts/sdclang/linux-x86_64/bin
 endif
 
 # Platform
