@@ -22,6 +22,6 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi Note 10
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := Xiaomi/tucana_eea/tucana:10/QKQ1.190825.002/V11.1.1.0.QFDEUXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/tucana_eea/tucana:10/QKQ1.190825.002/V11.1.1.0.QFDIDXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
