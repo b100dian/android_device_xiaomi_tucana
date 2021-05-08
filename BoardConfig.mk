@@ -101,7 +101,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 #TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 #TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x880000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
-BOARD_KERNEL_CMDLINE += selinux=0 audit=0 enforcing=0
+BOARD_KERNEL_CMDLINE += selinux=1 enforcing=0 audit=0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 TARGET_KERNEL_ARCH := arm64
@@ -142,6 +142,9 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 #BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := 16384
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+#BOARD_VENDORIMAGE_PARTITION_SIZE := 2080194560
+#BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+#TARGET_COPY_OUT_VENDOR := vendor
 BUILD_WITHOUT_VENDOR := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_METADATA_PARTITION := true
