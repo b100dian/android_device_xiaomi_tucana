@@ -132,6 +132,9 @@ void vendor_load_properties() {
     property_override("ro.bootimage.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override("ro.build.description", "tucana_eea-user 10 QKQ1.190825.002 V11.1.1.0.QFDEUXM release-keys");
 
+    // dbus readable
+    chmod("/sys/fs/selinux/enforce", 0644);
+
     // Workaround SafetyNet
-    workaround_snet_properties();
+    // workaround_snet_properties();
 }
