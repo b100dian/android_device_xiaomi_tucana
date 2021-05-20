@@ -190,6 +190,7 @@ TARGET_TAP_TO_WAKE_NODE := "/dev/input/event4"
 
 # Treble
 BOARD_VNDK_VERSION := current
+BOARD_VNDK_RUNTIME_DISABLE := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
